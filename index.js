@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 // Local MongoDB Connection String
 const localURI = 'mongodb://127.0.0.1:27017/suusriAi';
 

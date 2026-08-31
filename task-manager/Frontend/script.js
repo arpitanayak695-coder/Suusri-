@@ -31,15 +31,12 @@ function displayTasks(tasks)
             </button>`;
             taskList.appendChild(li);});
 }
-
 // Add new task
 taskForm.addEventListener("submit", async (event) => {event.preventDefault();
-
     const title = taskInput.value.trim();
     if (!title) 
         {
-        return;
-    }
+        return;}
     try
     {
         const response = await fetch(API_URL, {
@@ -60,7 +57,6 @@ taskForm.addEventListener("submit", async (event) => {event.preventDefault();
         console.error("Error adding task:", error);
     }
 });
-
 // Delete task
 async function deleteTask(id) {
     try {
@@ -75,5 +71,4 @@ async function deleteTask(id) {
         console.error("Error deleting task:", error);
     }
 }
-// Load tasks when page opens
 fetchTasks();
